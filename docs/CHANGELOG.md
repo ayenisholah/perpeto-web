@@ -4,6 +4,11 @@ All notable repository changes are recorded here using Keep a Changelog categori
 
 ## [Unreleased]
 
+### Changed
+
+- The README and DEPLOYMENT now describe the live demo at `app.perpeto.xyz` as the M3 surface (closed 2026-11-25). Google and Apple sign-in stay off until their provider origins are configured; the steps to turn them on are kept.
+- The sign-in page now says only what the deployment offers: with no provider configured it introduces the live demo instead of promising Google or Apple sign-in.
+
 ### Added
 
 - The Perpeto web platform (DEC-0021): a Next.js 16 server consuming `@ayenisholah/perpeto-api-client` 0.25.0.

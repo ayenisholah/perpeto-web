@@ -5,7 +5,7 @@ The web platform for [Perpeto](https://github.com/ayenisholah/perpeto-backend), 
 - **the read-only live demo** (DEC-0017): a seeded PAPER account trading live public market data, no account needed;
 - **the operator console**: Google and Apple sign-in, scanner, positions, strategies, portfolio, alerts, health, sessions and emergency controls.
 
-It runs at `https://app.perpeto.xyz` (DEC-0021). The iOS client lives in [`perpeto-mobile`](https://github.com/ayenisholah/perpeto-mobile); every trading decision, credential and order stays in the backend. LIVE trading is permanently locked.
+It runs at **[app.perpeto.xyz](https://app.perpeto.xyz)** (DEC-0021). The live demo is the M3 public surface. Google and Apple sign-in are implemented but stay off until their provider origins are configured: without `PERPETO_GOOGLE_CLIENT_ID` and `PERPETO_APPLE_SERVICES_ID` the sign-in page offers only the demo. The iOS client lives in [`perpeto-mobile`](https://github.com/ayenisholah/perpeto-mobile); every trading decision, credential and order stays in the backend. LIVE trading is permanently locked.
 
 ## How it is built
 
