@@ -28,6 +28,6 @@ The staging host (`perpeto-backend`, DEC-0020 and DEC-0021) runs the image as it
 
 1. From `perpeto-backend`, after its web-hosting change is deployed: `scripts/aws/create-deploy-key.sh perpeto-web-deployer ayenisholah/perpeto-web staging`. This stores the deploy key and `AWS_REGION` in this repository's `staging` environment.
 2. Set the repository variable `STAGING_ENABLED=true`.
-3. **Google:** add `https://app.perpeto.xyz` as an authorized JavaScript origin on the web OAuth client.
+3. **Google** (deferred, not needed for the demo): add `https://app.perpeto.xyz` as an authorized JavaScript origin on the web OAuth client.
 4. **Apple** (optional): create a Services ID, verify `app.perpeto.xyz`, add it as a return URL, and set `PERPETO_APPLE_WEB_SERVICES_ID` in the backend's `deploy/ec2/staging.env`.
-5. **DNS:** an A record `app.perpeto.xyz` → the staging Elastic IP. Until then the site answers at `https://app.<elastic-ip>.sslip.io`, where Google sign-in will not work because that origin is not registered.
+5. **DNS:** an A record `app.perpeto.xyz` → the staging Elastic IP (done). `https://app.<elastic-ip>.sslip.io` redirects to it, because the server accepts actions only from its configured origin.
